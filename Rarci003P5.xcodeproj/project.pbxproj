@@ -15,6 +15,8 @@
 		8E155AD31BE030910030F68A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E155AD21BE030910030F68A /* Images.xcassets */; };
 		8E155AD61BE030910030F68A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E155AD41BE030910030F68A /* LaunchScreen.xib */; };
 		8E155AE21BE030910030F68A /* Rarci003P5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E155AE11BE030910030F68A /* Rarci003P5Tests.m */; };
+		8E155AED1BE0319D0030F68A /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E155AEC1BE0319D0030F68A /* ThirdViewController.m */; };
+		8E155AF01BE038D60030F68A /* MyPinDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E155AEF1BE038D60030F68A /* MyPinDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		8E155ADB1BE030910030F68A /* Rarci003P5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rarci003P5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E155AE01BE030910030F68A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E155AE11BE030910030F68A /* Rarci003P5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rarci003P5Tests.m; sourceTree = "<group>"; };
+		8E155AEB1BE0319D0030F68A /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		8E155AEC1BE0319D0030F68A /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		8E155AEE1BE038D60030F68A /* MyPinDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPinDictionary.h; sourceTree = "<group>"; };
+		8E155AEF1BE038D60030F68A /* MyPinDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPinDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,8 @@
 				8E155AC61BE030910030F68A /* AppDelegate.h */,
 				8E155AC71BE030910030F68A /* AppDelegate.m */,
 				8E155AC91BE030910030F68A /* FirstViewController.h */,
+				8E155AEB1BE0319D0030F68A /* ThirdViewController.h */,
+				8E155AEC1BE0319D0030F68A /* ThirdViewController.m */,
 				8E155ACA1BE030910030F68A /* FirstViewController.m */,
 				8E155ACC1BE030910030F68A /* SecondViewController.h */,
 				8E155ACD1BE030910030F68A /* SecondViewController.m */,
@@ -94,6 +102,8 @@
 				8E155AD21BE030910030F68A /* Images.xcassets */,
 				8E155AD41BE030910030F68A /* LaunchScreen.xib */,
 				8E155AC21BE030910030F68A /* Supporting Files */,
+				8E155AEE1BE038D60030F68A /* MyPinDictionary.h */,
+				8E155AEF1BE038D60030F68A /* MyPinDictionary.m */,
 			);
 			path = Rarci003P5;
 			sourceTree = "<group>";
@@ -225,7 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E155ACE1BE030910030F68A /* SecondViewController.m in Sources */,
+				8E155AED1BE0319D0030F68A /* ThirdViewController.m in Sources */,
 				8E155AC81BE030910030F68A /* AppDelegate.m in Sources */,
+				8E155AF01BE038D60030F68A /* MyPinDictionary.m in Sources */,
 				8E155ACB1BE030910030F68A /* FirstViewController.m in Sources */,
 				8E155AC51BE030910030F68A /* main.m in Sources */,
 			);
@@ -422,6 +434,7 @@
 				8E155AE71BE030910030F68A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E155AE81BE030910030F68A /* Build configuration list for PBXNativeTarget "Rarci003P5Tests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +443,7 @@
 				8E155AEA1BE030910030F68A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
