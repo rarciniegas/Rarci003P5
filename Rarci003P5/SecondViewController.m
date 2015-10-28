@@ -13,9 +13,14 @@
 @end
 
 @implementation SecondViewController
+@synthesize myWeb;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString * urlString = @"http://www.google.com";
+    NSURL * myUrl = [NSURL URLWithString:urlString];
+    NSURLRequest * myRequest = [NSURLRequest requestWithURL:myUrl];
+    [myWeb loadRequest:myRequest];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

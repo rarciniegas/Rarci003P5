@@ -14,9 +14,45 @@
 
 @implementation FirstViewController
 
+@synthesize digit0, digit1, digit2, digit3;
+
+int currentDigit = 0;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction) clickDigit: (UIButton *) sender
+{
+    int myDigit = sender.tag;
+    NSString * myNumber = [NSString stringWithFormat:@"%d", myDigit];
+    switch (currentDigit) {
+        case 0:
+            digit0.text = myNumber;
+            currentDigit++;
+            break;
+            
+        case 1:
+            digit1.text = myNumber;
+            currentDigit++;
+            break;
+            
+        case 2:
+            digit2.text = myNumber;
+            currentDigit++;
+            break;
+            
+        case 3:
+            digit3.text = myNumber;
+            currentDigit++;
+            break;
+            
+        default:
+            break;
+    }
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

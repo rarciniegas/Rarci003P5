@@ -10,6 +10,10 @@
 
 @interface FirstViewController : UIViewController
 
-
+-(IBAction) clickDigit: (UIButton *) sender;
+@property (strong, nonatomic) IBOutlet UILabel *digit0;
+@property (strong, nonatomic) IBOutlet UILabel *digit1;
+@property (strong, nonatomic) IBOutlet UILabel *digit2;
+@property (strong, nonatomic) IBOutlet UILabel *digit3;
 @end
 

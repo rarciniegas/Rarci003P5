@@ -10,4 +10,18 @@
 
 @interface MyPinDictionary : NSObject
 
+@property (nonatomic, strong) NSMutableDictionary *globalPinDictionary;
+@property (nonatomic, strong) NSString *activePin;
+@property (nonatomic, strong) NSString *activeWebsite;
+
+// Class Method
++(MyPinDictionary *) thePinDictionary;
+
+// Instance Methods
+-(id)init;
+
+-(BOOL)validatePin:(NSString *) obtainedPin;
+
+-(void)updateThePinDictionary:(NSMutableArray *)obtainedPins :(NSMutableArray *)obtainedSites;
+
 @end
