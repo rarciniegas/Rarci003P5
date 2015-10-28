@@ -1,3 +1,9 @@
+//  PROGRAMMER: Roberto Arciniegas
+//  PANTHERID: 1385020
+//  CLASS:          COP 465501 TR 5:00
+//  INSTRUCTOR:     Steve Luis  ECS 282
+//  ASSIGNMENT:     #5
+//  DUE:            Tuesday 10/27/15
 //
 //  FirstViewController.m
 //  Rarci003P5
@@ -21,13 +27,14 @@ int currentDigit = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    pinData = [MyPinDictionary thePinDictionary];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction) clickDigit: (UIButton *) sender
 {
     int myDigit = (int)sender.tag;
-    NSString * myNumber = [NSString stringWithFormat:@"%d", myDigit];
+    NSString * myNumber = [NSString stringWithFormat:@"%i", myDigit];
     switch (currentDigit) {
         case 0:
             digit0.text = myNumber;
@@ -60,14 +67,17 @@ int currentDigit = 0;
 
 -(void)checkPin
 {
+   
+    
     NSString *pin = [NSString stringWithFormat:@"%@%@%@%@",
                      digit0.text,
                      digit1.text,
                      digit2.text,
                      digit3.text];
+    NSLog(@"%@\n",pin);
+    BOOL pinValidation = [pinData validatePin:pin];
     
-    if ( [pinData validatePin:pin] == TRUE)
-    {
+    if(pinValidation == TRUE)    {
         [self.tabBarController setSelectedIndex:1];
         
         [self.tabBarController.view setNeedsDisplay];
@@ -76,13 +86,13 @@ int currentDigit = 0;
     else
     {
         NSString *message = [NSString stringWithFormat:
-                             @"%@ is not a valid pin!", pin];
+                             @"%@ is incorrect!", pin];
         
         UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"Invalid Pin!"
+                              initWithTitle:@"Invalid Entry!"
                               message:message
                               delegate:nil
-                              cancelButtonTitle:@"Okay."
+                              cancelButtonTitle:@"Try again."
                               otherButtonTitles:nil];
         [alert show];
         

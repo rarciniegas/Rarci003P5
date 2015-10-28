@@ -1,3 +1,9 @@
+//  PROGRAMMER: Roberto Arciniegas
+//  PANTHERID: 1385020
+//  CLASS:          COP 465501 TR 5:00
+//  INSTRUCTOR:     Steve Luis  ECS 282
+//  ASSIGNMENT:     #5
+//  DUE:            Tuesday 10/27/15
 //
 //  SecondViewController.m
 //  Rarci003P5
@@ -7,6 +13,7 @@
 //
 
 #import "SecondViewController.h"
+#import "MyPinDictionary.h"
 
 @interface SecondViewController ()
 
@@ -17,7 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString * urlString = @"http://www.google.com";
+    pinData = [MyPinDictionary thePinDictionary];
+    NSString * urlString = pinData.activeWebsite;
     NSURL * myUrl = [NSURL URLWithString:urlString];
     NSURLRequest * myRequest = [NSURLRequest requestWithURL:myUrl];
     [myWeb loadRequest:myRequest];
