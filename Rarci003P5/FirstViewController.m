@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "MyPinDictionary.h"
 
 @interface FirstViewController ()
 
@@ -25,7 +26,7 @@ int currentDigit = 0;
 
 - (IBAction) clickDigit: (UIButton *) sender
 {
-    int myDigit = sender.tag;
+    int myDigit = (int)sender.tag;
     NSString * myNumber = [NSString stringWithFormat:@"%d", myDigit];
     switch (currentDigit) {
         case 0:
@@ -45,7 +46,9 @@ int currentDigit = 0;
             
         case 3:
             digit3.text = myNumber;
-            currentDigit++;
+            [self checkPin];
+            currentDigit = 0;
+            [self clearScreen];
             break;
             
         default:
@@ -53,6 +56,46 @@ int currentDigit = 0;
     }
     
 
+}
+
+-(void)checkPin
+{
+    NSString *pin = [NSString stringWithFormat:@"%@%@%@%@",
+                     digit0.text,
+                     digit1.text,
+                     digit2.text,
+                     digit3.text];
+    
+    if ( [pinData validatePin:pin] == TRUE)
+    {
+        [self.tabBarController setSelectedIndex:1];
+        
+        [self.tabBarController.view setNeedsDisplay];
+    }
+    
+    else
+    {
+        NSString *message = [NSString stringWithFormat:
+                             @"%@ is not a valid pin!", pin];
+        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Invalid Pin!"
+                              message:message
+                              delegate:nil
+                              cancelButtonTitle:@"Okay."
+                              otherButtonTitles:nil];
+        [alert show];
+        
+    }
+    
+}
+
+-(void)clearScreen
+{
+    digit0.text = @"";
+    digit1.text = @"";
+    digit2.text = @"";
+    digit3.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {

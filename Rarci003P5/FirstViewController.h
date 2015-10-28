@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FirstViewController : UIViewController
+@class MyPinDictionary;
+@interface FirstViewController : UIViewController{
+    MyPinDictionary *pinData;
+}
 
 -(IBAction) clickDigit: (UIButton *) sender;
 @property (strong, nonatomic) IBOutlet UILabel *digit0;

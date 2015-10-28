@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MyPinDictionary;
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController{
+    MyPinDictionary *pinData;
+}
+
+
 @property (strong, nonatomic) IBOutlet UIWebView * myWeb;
 
 
